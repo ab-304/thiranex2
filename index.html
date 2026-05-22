@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vulnerability Scanner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🛡 Vulnerability Scanner</h1>
+
+        <p class="subtitle">
+            Scan websites for common security weaknesses
+        </p>
+
+
+        <div class="input-box">
+
+            <input type="text"
+                   id="website"
+                   placeholder="Enter website URL">
+
+            <button onclick="startScan()">
+                Scan
+            </button>
+
+        </div>
+
+
+        <div class="scan-animation"
+             id="scanAnimation">
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="results"
+             id="results">
+
+            <h2>Security Report</h2>
+
+            <div class="report-card safe">
+
+                <h3>HTTPS Security</h3>
+
+                <p id="httpsResult">
+                    Waiting for scan...
+                </p>
+
+            </div>
+
+
+            <div class="report-card warning">
+
+                <h3>Open Ports</h3>
+
+                <p id="portResult">
+                    Waiting for scan...
+                </p>
+
+            </div>
+
+
+            <div class="report-card danger">
+
+                <h3>Software Version</h3>
+
+                <p id="softwareResult">
+                    Waiting for scan...
+                </p>
+
+            </div>
+
+
+            <div class="score-box">
+
+                <h2 id="score">
+                    Security Score: --
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
